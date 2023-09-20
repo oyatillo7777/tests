@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'home_page.dart';
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+  bool? isLogged = sharedPreferences.getBool("isLogged") ?? false;
+
+  runApp(MaterialApp(routes: {
+    '/': (context) =>
+    isLogged == true ? Sixteenth_Home_Screen() : Sixteenth_Login(),
+    '/home': (context) => Sixteenth_Home_Screen(),
+  }));
+}
 class Sixteenth_Login extends StatefulWidget {
   const Sixteenth_Login({super.key});
 
