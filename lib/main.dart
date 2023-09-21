@@ -13,6 +13,7 @@ import '17-lesson Tarixiy joylar and hero widget/screens/main.dart';
 import '18-dioga kirish/screens/main.dart';
 import '19-lesson dio post/main.dart';
 import '2-lesson images va ListView/second_lesson.dart';
+import '20-lesson AppBar actions/main.dart';
 import '3-lesson next Screen/3-lesson.dart';
 import '4-lesson tugma boslish holati/fourth_lesson_second_screen.dart';
 import '5-lesson splesh screen va listview/oddiy_usulda_splesh/firts_splesh.dart';
@@ -21,9 +22,7 @@ import '8-lesson drawer/main.dart';
 import '8-lesson drawer/ozim qilganim/firts.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: Ninetheenth(),
-  ));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -36,6 +35,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return MaterialApp(
+      home: Twentieth(),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
